@@ -3,7 +3,7 @@
 }
 
 header {
-    min-height: 18vh;
+    min-height: 12vh;
     background-color: purple;
     color: white;   
     padding: 30px; 
@@ -35,4 +35,32 @@ header {
 .header-content > p {
     font-size: .8rem;
     color: rgba(245, 245, 245, 0.952);
+}
+
+.side-nav-menu {
+    list-style-type: none;
+    padding: 10px 10px;
+    width: 25%;
+    /* background-color: #f1f1f1; */
+    background-color: #e5e4ee;
+    height: 100%;
+    position: fixed; 
+    overflow: auto;    
+}
+
+.side-nav-menu li {
+    padding: 12px 10px;
+    /* text-align: center; */
+    background-color: #7476a1;
+    border-bottom: solid #f1f1f1 1px;
+}
+
+.side-nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.side-nav-menu li:hover {
+    background-color: black;
 }

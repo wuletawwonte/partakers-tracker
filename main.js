@@ -22,3 +22,5 @@ app.whenReady().then(() => {
         }
     });
 });
+
+// Menu.setApplicationMenu(null);
