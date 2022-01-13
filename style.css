@@ -37,16 +37,16 @@ header {
 }
 
 .header-content > p {
-    font-size: .8rem;
+    font-size: 1rem;
+    font-weight: bold;
     color: rgba(245, 245, 245, 0.952);
 }
 
 .side-nav-menu {
     list-style-type: none;
     padding: 0;
-    width: 22%;
+    width: 25%;
     background-color: white;
-    /* background-color: #eee; */
     height: 100%;
     position: fixed; 
     overflow: auto;    
@@ -56,8 +56,11 @@ header {
     margin: 0;
     padding: 12px 10px;
     text-align: center;
-    /* background-color: ; */
     border-bottom: solid white 1px;
+}
+
+.side-nav-menu li:hover {
+    cursor: pointer;
 }
 
 .side-nav-menu li a {
@@ -71,8 +74,8 @@ header {
 }
 
 .main-content {
-    margin-left: 22%;
-    padding: 20px;
+    margin-left: 25%;
+    padding: 15px;
 }
 
 .main-content-item {
