@@ -4,6 +4,7 @@
 
 body {
     background-color: #eee;
+    font-family: Inter,Roboto,Oxygen,Fira Sans,Helvetica Neue,sans-serif;
 }
 
 header {
@@ -68,6 +69,8 @@ header {
 .side-nav-menu li a {
     text-decoration: none;
     color: black;
+    font-weight: 500;
+    line-height: 1.4rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
