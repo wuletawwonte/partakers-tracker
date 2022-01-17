@@ -1,9 +1,11 @@
-import Dashboard from "./views/dashboard";
-import Members from "./views/members";
+import Dashboard from "./views/dashboard.js";
+import Members from "./views/members.js";
 
-export default routes = [
+const routes = [
     { path: "/", view: Dashboard },
     { path: "/members", view: Members },
-    { path: "/", view: Dashboard },
-    { path: "/", view: Dashboard },
+    { path: "/payment", view: Payment },
+    { path: "/settings", view: Settings },
 ];
+
+export default routes;

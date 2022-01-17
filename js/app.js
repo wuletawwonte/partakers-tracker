@@ -1,3 +1,3 @@
-import routes from "./router";
+import routes from "./router.js";
 console.log(routes);
 
