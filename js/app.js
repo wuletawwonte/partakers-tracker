@@ -1,3 +1,3 @@
-console.log("Check that");
+import routes from "./router";
+console.log(routes);
 
-const router = []
