@@ -1,3 +1,2 @@
-import routes from "./router.js";
-console.log(routes);
+console.log(Vue);
 
