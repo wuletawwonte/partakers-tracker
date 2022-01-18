@@ -1,4 +1,4 @@
 const sqlite = require("better-sqlite3-with-prebuilds");
-const db = new sqlite("../mydb.db");
+let db = sqlite("evandb", {fileMustExist: true});
 
 exports.db = db;
