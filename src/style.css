@@ -91,3 +91,11 @@ header {
     background-color: white;
     padding: 20px;
 }
+
+/* Members table styling */
+.members-table {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    min-height: 100px;
+}
