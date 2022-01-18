@@ -75,7 +75,12 @@ header {
 }
 
 .side-nav-menu li:hover {
+    background-color: rgb(209, 207, 207);
+}
+
+.side-nav-menu > .activated-page-link, .side-nav-menu > .activated-page-link:hover {
     background-color: #00c5c1;
+    /* color:  */
 }
 
 .main-content {
