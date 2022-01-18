@@ -1,6 +1,5 @@
-const { app, BrowserWindow, protocol } = require("electron");
+const { app, BrowserWindow } = require("electron");
 const path = require("path");
-const url = require("url");
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -12,43 +11,22 @@ function createWindow() {
         },
     });
 
-    // win.loadFile("index.html");
-    win.loadURL(
-        url.format({
-            pathname: "index.html",
-            protocol: "file",
-            slashes: true,
-        })
-    );
+    win.loadFile("./src/index.html");
 
     win.on("closed", () => {
         win = null;
     });
 }
 
-app.on("ready", () => {
-    protocol.interceptFileProtocol(
-        "file",
-        (request, callback) => {
-            const url =
-                request.url.substr(7); /* all urls start with 'file://' */
-            callback({ path: path.normalize(`${__dirname}/${url}`) });
-        },
-        (err) => {
-            if (err) console.error("Failed to register protocol");
-        }
-    );
+
+app.whenReady().then(() => {
     createWindow();
+
+    app.on("activate", () => {
+        if (BrowserWindow.getAllWindows().length === 0) {
+            createWindow();
+        }
+    });
 });
-
-// app.whenReady().then(() => {
-//     createWindow();
-
-//     app.on("activate", () => {
-//         if (BrowserWindow.getAllWindows().length === 0) {
-//             createWindow();
-//         }
-//     });
-// });
 
 // Menu.setApplicationMenu(null);
