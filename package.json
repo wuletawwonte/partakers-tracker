@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "better-sqlite3-with-prebuilds": "^7.4.3",
     "electron": "^16.0.6"
   }
 }
