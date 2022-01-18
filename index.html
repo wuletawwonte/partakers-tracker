@@ -7,8 +7,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
     <title>በወንጌልም ማኅበረተኛ</title>
 
-    <link rel="stylesheet" href="./style.css" />
-    <script src="js/vue.global.prod.js"></script>   
+    <link rel="stylesheet" href="./src/style.css" />
 </head>
 <body>
     <header>
@@ -21,10 +20,10 @@
     </header>
     <nav>
         <ul class="side-nav-menu">
-            <li><a href="/" data-link>Dashboard</a></li>
-            <li><a href="/members" data-link>Members</a></li>
-            <li><a href="/payment" data-link>Payment</a></li>
-            <li><a href="/settings" data-link>Settings</a></li>
+            <li><a href="./index.html" data-link>Dashboard</a></li>
+            <li><a href="./src/pages/members.html" data-link>Members</a></li>
+            <li><a href="./src/pages/payment.html" data-link>Payment</a></li>
+            <li><a href="./src/pages/settings.html" data-link>Settings</a></li>
         </ul>
     </nav>
     <div class="main-content">
@@ -36,6 +35,6 @@
 
         </div>
     </div>
-    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./src/js/app.js"></script>
 </body>
 </html>
