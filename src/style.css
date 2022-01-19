@@ -55,7 +55,7 @@ header {
 
 .side-nav {
     flex-basis: 2;
-    flex-shrink: 1;
+    width: 25%;
 }
 
 .side-nav-menu {
