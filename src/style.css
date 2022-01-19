@@ -9,7 +9,7 @@ body {
 
 header {
     width: 100%;
-    height: 25vh;
+    height: 22vh;
     position: fixed;
     background-color: purple;
     color: white;
@@ -50,12 +50,13 @@ header {
     display: flex;
     width: 100%;
     /* flex-direction: column; */
-    padding-top: 25vh;
+    padding-top: 22vh;
 }
 
 .side-nav {
-    flex-basis: 2;
-    width: 25%;
+    flex-basis: 3;
+    flex-shrink: 0;
+    min-width: 25%;
 }
 
 .side-nav-menu {
@@ -121,22 +122,20 @@ header {
     width: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .table th,
 .table td {
     padding: 0.75rem;
     vertical-align: top;
+    text-align: left;
 }
 
-.table thead th {
+/* .table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #eceeef;
-}
-
-.table tbody + tbody {
-    border-top: 2px solid #eceeef;
-}
+} */
 
 .table .table {
     background-color: #fff;
@@ -147,18 +146,13 @@ header {
     padding: 0.3rem;
 }
 
-.table-bordered {
-    border: 1px solid #eceeef;
-}
+/* .table-bordered {
+    border-bottom: 1px solid #eceeef;
+} */
 
 .table-bordered th,
 .table-bordered td {
-    border: 1px solid #eceeef;
-}
-
-.table-bordered thead th,
-.table-bordered thead td {
-    border-bottom-width: 2px;
+    border-bottom: 1px solid #eceeef;
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
@@ -188,4 +182,41 @@ header {
 .table-success > th,
 .table-success > td {
     background-color: #dff0d8;
+}
+
+.btn {
+    font-size: 15px;
+    background-color: #00c5c1;
+    margin-bottom: 0;
+
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid transparent;    
+    padding: 6px 12px; 
+    color: white;
+}
+
+/* default button styling */
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-default:hover {
+    color: #333;
+    background-color: #00c5c1;
+    border-color: #adadad;
+}
+
+.btn-default:active {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.add-member-btn-container {
+    text-align: right;
 }

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
     let names = window.api.getMembers();
 
-    let membersList = document.getElementById("app");
+    let membersList = document.getElementById("membersContainer");
     let memberNames = names
         .map((member) => {
             return `<tr>
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         membersList.innerHTML = "No Member Registered Yet";
     } else {
         let tableContent = `
-            <table class="table table-hover table-info"> 
+            <table class="table table-hover table-bordered"> 
                 <thead>
                     <tr>
                         <th>Names</th>
