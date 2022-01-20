@@ -206,9 +206,8 @@ header {
 }
 
 .btn-default:hover {
-    color: #333;
-    background-color: #00c5c1;
-    border-color: #adadad;
+    /* color: #333; */
+    border-color: #00c5c1;
 }
 
 .btn-default:active {
