@@ -2,6 +2,11 @@
     margin: 0;
 }
 
+h2 {
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+}
+
 body {
     background-color: #eee;
     font-family: Inter, Roboto, Oxygen, Fira Sans, Helvetica Neue, sans-serif;
@@ -49,8 +54,8 @@ header {
 .app-content {
     display: flex;
     width: 100%;
-    /* flex-direction: column; */
     padding-top: 22vh;
+    min-height: 66vh;
 }
 
 .side-nav {
@@ -72,7 +77,6 @@ header {
     margin: 0;
     padding: 12px 10px;
     margin: 3px 3px;
-    text-align: center;
     border-bottom: solid #f8f9fb 1px;
     background-color: #edf2f7;
 }
@@ -111,7 +115,7 @@ header {
 }
 
 /* Members table styling */
-.members-table {
+.members-table, .add-member-form-container {
     margin-top: 20px;
     background-color: white;
     padding: 20px;
