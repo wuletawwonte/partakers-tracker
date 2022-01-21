@@ -188,6 +188,7 @@ header {
     font-size: 15px;
     background-color: #00c5c1;
     margin-bottom: 0;
+    text-decoration: none;
 
     -ms-touch-action: manipulation;
     touch-action: manipulation;
