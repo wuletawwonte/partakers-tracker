@@ -48,6 +48,8 @@
                         <h3>የአባሉን መረጃ ይመዝግቡ</h3>
                     </div>
                     <div class="add-member-form">
+                        <p id="errorMessage">
+                        </p>                        
                         <form>
                             <div class="row">
                                 <input
@@ -55,7 +57,8 @@
                                     class="add-member-input"
                                     id="firstname"
                                     placeholder="ስም"
-                                />
+                                    required
+                                />                                
                                 <input
                                     type="text"
                                     id="middlename"

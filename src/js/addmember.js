@@ -5,13 +5,29 @@ document.addEventListener("DOMContentLoaded", () => {
     saveMemberBtn.addEventListener("click", (e)=> {
         e.preventDefault();
 
-        const firstname = document.getElementById("firstname");
+        let firstname = document.getElementById("firstname");
         const middlename = document.getElementById("middlename");
         const lastname = document.getElementById("lastname");
         const phoneNumber = document.getElementById("phone");
         const amount = document.getElementById("amount");
 
-        console.log(firstname);
+        const validate = () => {
+            let errorMessage = [];
+            if(firstname.validity.valueMissing) {
+                console.log(firstname.validationMessage)
+                errorMessage.push("First Name cannot be empty");
+            }
+            if(errorMessage.length == 0) {
+                return true;
+            } else {
+
+                return false;
+            }
+        }
+
+        if(validate()) {
+            console.log("form properly validated");
+        }
     });
 
 
