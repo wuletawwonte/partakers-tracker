@@ -26,8 +26,11 @@
             <nav class="side-nav">
                 <ul class="side-nav-menu">
                     <li><a href="../../index.html" data-link>Dashboard</a></li>
+                    <li>
+                        <a href="members.html" data-link>አባላት</a>
+                    </li>
                     <li class="activated-page-link">
-                        <a href="members.html" data-link>Members</a>
+                        <a href="addmember.html" data-link>አባል መመግዘቢያ</a>
                     </li>
                     <li><a href="payment.html" data-link>Payment</a></li>
                     <li><a href="settings.html" data-link>Settings</a></li>
@@ -39,10 +42,42 @@
                         <h2>አባል መመዝገቢያ</h2>
                         <p>የወንጌል ማህበርተኛ መመዝገቢያ ፎርም</p>
                     </div>
-                    <a href="#" class="btn btn-default add-member-titlebar-right"><</a>
+                    <a href="members.html" class="btn btn-primary"><</a>
                 </div>
                 <div class="add-member-form-container">
-                    <div class="add-member-form"></div>
+                    <div class="add-member-form">
+                        <form>
+                            <input
+                                type="text"
+                                id="firstname"
+                                placeholder="ስም"
+                            />
+                            <input
+                                type="text"
+                                id="middlename"
+                                placeholder="የአባት ስም"
+                            />
+                            <input
+                                type="text"
+                                id="lastname"
+                                placeholder="የአያት ስም"
+                            />
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholde="የሞባይል ስልክ ቁጥር"
+                            />
+                            <input
+                                type="number"
+                                min="0"
+                                id="amount"
+                                placeholde="የሞባይል ስልክ ቁጥር"
+                            />
+                            <button type="submit" class="btn btn-secondary">
+                                Save
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
