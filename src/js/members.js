@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }).join("");
 
     if (memberNames.length == 0) {
-        membersList.innerHTML = "No Member Registered Yet";
+        membersList.innerHTML = "የተመዘገበ አባል የለም። እባክዎን አባል በመመዝገብ ይጀምሩ።";
     } else {
         let tableContent = `
             <table class="table table-hover table-bordered"> 
