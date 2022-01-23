@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 amount: amount.value
             }
             window.api.addMember(newMember);
+            sessionStorage.setItem('message', 'የወንጌል ማህበርተኛው በትክክል ተምዝግቧል።');
+            window.location.href=`../pages/members.html`;
         }
     });
 

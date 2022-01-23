@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", async () => {
     let names = window.api.getMembers();
+    let memberAddedAlert = document.getElementById('memberAddedAlert');
+    if(sessionStorage.getItem('message') != null) {
+        let message = sessionStorage.getItem('message');
+        memberAddedAlert.innerHTML = `<div class="alert alert-success">${message}</div>`;
+        sessionStorage.removeItem('message');
+    }
 
     let membersList = document.getElementById("membersContainer");
     let memberNames = names
@@ -29,4 +35,5 @@ document.addEventListener("DOMContentLoaded", async () => {
         `;
         membersList.innerHTML = tableContent;
     }
+
 });
