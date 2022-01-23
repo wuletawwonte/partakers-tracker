@@ -223,6 +223,8 @@ header {
     background-color: #dff0d8;
 }
 
+/* Button Styling */
+
 .btn {
     display: inline-block;
     margin-top: 10px;
@@ -283,6 +285,25 @@ header {
     color: #333;
     background-color: #e6e6e6;
     border-color: #adadad;
+}
+
+/* Alert Styling */
+
+.alert {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.alert-success {
+  color: #0f5132;
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+}
+.alert-success .alert-link {
+  color: #0c4128;
 }
 
 .add-member-btn-container {
