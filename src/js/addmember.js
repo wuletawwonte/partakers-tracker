@@ -27,6 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(validate()) {
             console.log("form properly validated");
+            const newMember = {
+                firstname: firstname.value,
+                middlename: middlename.value,
+                lastname: lastname.value,
+                phoneNumber: phoneNumber.value,
+                amount: amount.value
+            }
+            window.api.addMember(newMember);
         }
     });
 
