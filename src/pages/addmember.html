@@ -48,46 +48,59 @@
                         <h3>የአባሉን መረጃ ይመዝግቡ</h3>
                     </div>
                     <div class="add-member-form">
-                        <p id="errorMessage">
-                        </p>                        
+                        <p id="errorMessage"></p>
                         <form>
                             <div class="row">
-                                <input
-                                    type="text"
-                                    class="add-member-input"
-                                    id="firstname"
-                                    placeholder="ስም"
-                                    required
-                                />                                
-                                <input
-                                    type="text"
-                                    id="middlename"
-                                    class="add-member-input"
-                                    placeholder="የአባት ስም"
-                                />
-                                <input
-                                    type="text"
-                                    id="lastname"
-                                    class="add-member-input"
-                                    placeholder="የአያት ስም"
-                                />
+                                <div class="add-member-input-container">
+                                    <input
+                                        type="text"
+                                        id="firstname"
+                                        placeholder="ስም"
+                                        class="add-member-input"
+                                        required
+                                    />
+                                </div>
+                                <div class="add-member-input-container">
+                                    <input
+                                        type="text"
+                                        id="middlename"
+                                        class="add-member-input"
+                                        placeholder="የአባት ስም"
+                                    />
+                                </div>
+                                <div class="add-member-input-container">
+                                    <input
+                                        type="text"
+                                        id="lastname"
+                                        class="add-member-input"
+                                        placeholder="የአያት ስም"
+                                    />
+                                </div>
                             </div>
                             <div class="row">
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    class="add-member-input"
-                                    placeholder="የሞባይል ስልክ ቁጥር"
-                                />
-                                <input
-                                    type="number"
-                                    min="0"
-                                    id="amount"
-                                    class="add-member-input"
-                                    placeholder="ወራዊ መዋጮ"
-                                />
+                                <div class="add-member-input-container">
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        class="add-member-input"
+                                        placeholder="የሞባይል ስልክ ቁጥር"
+                                    />
+                                </div>
+                                <div class="add-member-input-container">
+                                    <input
+                                        type="number"
+                                        min="0"
+                                        id="amount"
+                                        class="add-member-input"
+                                        placeholder="ወራዊ መዋጮ"
+                                    />
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-primary" id="saveMember">
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                                id="saveMember"
+                            >
                                 መዝግብ
                             </button>
                         </form>
