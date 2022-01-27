@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         membersList.innerHTML = "የተመዘገበ አባል የለም። እባክዎን አባል በመመዝገብ ይጀምሩ።";
     } else {
         let tableContent = `
-            <table class="table table-hover table-bordered"> 
+            <table class="table table-hover table-sm table-bordered table-striped"> 
                 <thead>
                     <tr>
-                        <th>Names</th>
-                        <th>Actions</th>
+                        <th>አባላት</th>
+                        <th>ተግባር</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -2,7 +2,7 @@ const dbconnector = require("./dbconnector");
 const db = dbconnector.db;
 
 exports.getMembers = () => {
-    const query = "SELECT * FROM members";
+    const query = "SELECT * FROM members ORDER BY id DESC";
     let stmt = db.prepare(query);
     let res = stmt.all();
     return res;
