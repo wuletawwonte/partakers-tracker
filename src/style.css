@@ -39,7 +39,7 @@ input:focus {
     width: 100%;
     column-gap: 10px;
     row-gap: 0px;
-    align-items:baseline;
+    align-items: baseline;
 }
 
 /* Hide Scroll bar  */
@@ -158,6 +158,11 @@ header {
     min-height: 100px;
 }
 
+.members-table-header {
+    display: flex;
+    justify-content:space-between;
+}
+
 .table {
     width: 100%;
     max-width: 100%;
@@ -172,10 +177,10 @@ header {
     text-align: left;
 }
 
-/* .table thead th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #eceeef;
-} */
+.member-link {
+    text-decoration: none;
+    color: black;
+}
 
 .table .table {
     background-color: #fff;
@@ -184,6 +189,35 @@ header {
 .table-sm th,
 .table-sm td {
     padding: 0.3rem;
+}
+
+/* Form styling */
+.form-outline .form-control {
+    min-height: auto;
+    padding: 0.33em 0.75em;
+    border: 0;
+    background: transparent;
+    transition: all 0.2s linear;
+}
+
+.form-outline .form-control ~ .form-label {
+    position: absolute;
+    top: 0;
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    left: 0.75rem;
+    padding-top: 0.37rem;
+    pointer-events: none;
+    transform-origin: 0 0;
+    transition: all 0.2s ease-out;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 0;
+}
+
+.form-outline {
+    position: relative;
 }
 
 /* .table-bordered {
@@ -317,14 +351,7 @@ header {
     color: #dc3545;
 }
 
-
 /* Add member page styling  */
-.add-member-btn-container {
-    text-align: right;
-    border-bottom: 1px solid gray;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
 
 .add-member-titlebar {
     display: flex;

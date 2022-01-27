@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let memberNames = names
         .map((member) => {
             return `<tr>
-                    <td>${member.firstname} ${member.middlename}</td>
+                    <td><a class="member-link" href="#">${member.firstname} ${member.middlename}</a></td>
                     <td><button>Delete</button></td>
                 </tr>
                 `;
