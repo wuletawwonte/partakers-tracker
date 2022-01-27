@@ -31,16 +31,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 errorStatus = false;
                 middlenameError.innerHTML = "እባክዎን የአባት ስም ሳይሞሉ አይለፉ";
                 middlenameError.style = "display: block";
-            } 
+            } else {
+                middlenameError.style = "display: none";
+            }
             if (lastname.validity.valueMissing) {
                 errorStatus = false;
                 lastnameError.innerHTML = "እባክዎን የአያት ስም ሳይሞሉ አይለፉ";
                 lastnameError.style = "display: block";            
+            } else {
+                lastnameError.style = "display: none";
             }
             if (amount.validity.valueMissing) {
                 errorStatus = false;
                 amountError.innerHTML = "እባክዎን ወራዊ መዋጮ ሳይሞሉ አይለፉ";
                 amountError.style = "display: block";
+            }  else {
+                amountError.style = "display: none";
             }
             return errorStatus;
         };
