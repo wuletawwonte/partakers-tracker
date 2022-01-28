@@ -150,6 +150,11 @@ header {
 }
 
 /* Members table styling */
+.search-field {
+    border-radius: 0 20px 20px 0;
+    height: 2.45rem;
+}
+
 .members-table,
 .add-member-form-container {
     margin-top: 20px;
@@ -190,39 +195,6 @@ header {
 .table-sm td {
     padding: 0.3rem;
 }
-
-/* Form styling */
-.form-outline .form-control {
-    min-height: auto;
-    padding: 0.33em 0.75em;
-    border: 0;
-    background: transparent;
-    transition: all 0.2s linear;
-}
-
-.form-outline .form-control ~ .form-label {
-    position: absolute;
-    top: 0;
-    max-width: 90%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    left: 0.75rem;
-    padding-top: 0.37rem;
-    pointer-events: none;
-    transform-origin: 0 0;
-    transition: all 0.2s ease-out;
-    color: rgba(0, 0, 0, 0.6);
-    margin-bottom: 0;
-}
-
-.form-outline {
-    position: relative;
-}
-
-/* .table-bordered {
-    border-bottom: 1px solid #eceeef;
-} */
 
 .table-bordered th,
 .table-bordered td {
