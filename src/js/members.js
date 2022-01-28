@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", async () => {
     let names = window.api.getMembers();
-    let memberAddedAlert = document.getElementById('memberAddedAlert');
-    if(sessionStorage.getItem('message') != null) {
-        let message = sessionStorage.getItem('message');
-        memberAddedAlert.innerHTML = `<div class="alert alert-success">${message}</div>`;
-        sessionStorage.removeItem('message');
-    }
+    let memberAddedAlert = document.getElementById("memberAddedAlert");
+
+    const memberRegisteredMessage = (alertElement) => {
+        if (sessionStorage.getItem("message") != null) {
+            let message = sessionStorage.getItem("message");
+            alertElement.innerHTML = `<div class="alert alert-success">${message}</div>`;
+            sessionStorage.removeItem("message");
+        }
+    };
+
+    memberRegisteredMessage(memberAddedAlert);
 
     let membersList = document.getElementById("membersContainer");
     let memberNames = names
@@ -15,7 +20,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <td><button>Delete</button></td>
                 </tr>
                 `;
-        }).join("");
+        })
+        .join("");
 
     if (memberNames.length == 0) {
         membersList.innerHTML = "የተመዘገበ አባል የለም። እባክዎን አባል በመመዝገብ ይጀምሩ።";
@@ -35,5 +41,4 @@ document.addEventListener("DOMContentLoaded", async () => {
         `;
         membersList.innerHTML = tableContent;
     }
-
 });
