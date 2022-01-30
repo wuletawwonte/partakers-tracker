@@ -1,10 +1,12 @@
 const dbconnector = require("./dbconnector");
 const db = dbconnector.db;
 
-exports.getMembers = () => {
-    const query = "SELECT * FROM members ORDER BY id DESC";
+exports.getMembers = (searchKey) => {
+    console.log(searchKey);
+    const query = `SELECT * FROM members WHERE firstname LIKE '%${searchKey}%' ORDER BY firstname`;
     let stmt = db.prepare(query);
     let res = stmt.all();
+    console.log(res);
     return res;
 }
 
