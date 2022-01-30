@@ -163,6 +163,10 @@ header {
     min-height: 100px;
 }
 
+.members-table {
+    margin-top: 0;
+}
+
 .members-table-header {
     display: flex;
     justify-content:space-between;

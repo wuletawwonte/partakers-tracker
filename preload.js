@@ -1,8 +1,7 @@
 const { contextBridge } = require("electron");
 const membersModel = require("./db/membersmodel");
 
-const getMembers = async (searchKey = "") => {
-    console.log(searchKey);
+const getMembers = async (searchKey = '') => {
     return membersModel.getMembers(searchKey);
 }
 
