@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <td><a class="member-link" href="#">${member.firstname}</a></td>
                     <td><a class="member-link" href="#">${member.middlename}</a></td>
                     <td><a class="member-link" href="#">${member.lastname}</a></td>
+                    <td><a class="member-link" href="#">${member.created}</a></td>
                     <td><button>Delete</button></td>
                 </tr>
                 `;
@@ -62,6 +63,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <th>ስም</th>
                             <th>የአባት ስም</th>
                             <th>የአያት ስም</th>
+                            <th>Created</th>
                             <th>ተግባር</th>
                         </tr>
                     </thead>

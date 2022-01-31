@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 lastname: lastname.value,
                 phoneNumber: phoneNumber.value,
                 amount: amount.value,
+                created: Date.now()
             };
             window.api.addMember(newMember);
             sessionStorage.setItem("message", "የወንጌል ማህበርተኛው በትክክል ተመዝግቧል።");
