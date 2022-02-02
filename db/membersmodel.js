@@ -2,7 +2,7 @@ const dbconnector = require("./dbconnector");
 const db = dbconnector.db;
 
 exports.getMembers = (searchKey) => {
-    const query = `SELECT * FROM members WHERE firstname LIKE '%${searchKey}%'  OR middlename LIKE '%${searchKey}%' OR lastname LIKE '%${searchKey}%' ORDER BY id DESC LIMIT 5`;
+    const query = `SELECT * FROM members WHERE firstname LIKE '%${searchKey}%'  OR middlename LIKE '%${searchKey}%' OR lastname LIKE '%${searchKey}%' ORDER BY id DESC`;
     let stmt = db.prepare(query);
     let res = stmt.all();
     return res;

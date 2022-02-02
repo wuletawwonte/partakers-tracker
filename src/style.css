@@ -152,7 +152,7 @@ header {
 /* Members table styling */
 #paginationContainer {
     display: none;
-    border: solid 1px red;
+    text-align: right;
 }
 
 .pagination {

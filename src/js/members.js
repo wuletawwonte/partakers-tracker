@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     let searchField = document.getElementById("searchfield");
     let paginationContainer = document.getElementById("paginationContainer");
 
-    paginationContainer.style = "display: block";
-
     searchField.addEventListener("keyup", () => {
         reloadTable(searchField.value);
     });
@@ -24,35 +22,53 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const loadedMembers = (names) => {
         let memberNames = names
-            .map((member, index) => {                
+            .map((member, index) => {
                 return `<tr>
                     <td>${++index}</td>
-                    <td><a class="member-link" href="#">${member.firstname}</a></td>
-                    <td><a class="member-link" href="#">${member.middlename}</a></td>
-                    <td><a class="member-link" href="#">${member.lastname}</a></td>
-                    <td><a class="member-link" href="#">${member.created}</a></td>
+                    <td><a class="member-link" href="#">${
+                        member.firstname
+                    }</a></td>
+                    <td><a class="member-link" href="#">${
+                        member.middlename
+                    }</a></td>
+                    <td><a class="member-link" href="#">${
+                        member.lastname
+                    }</a></td>
+                    <td><a class="member-link" href="#">${
+                        member.created
+                    }</a></td>
                     <td><button>Delete</button></td>
                 </tr>
                 `;
             })
+            .filter((member, index) => {
+                if (index < 10) {
+                    return member;
+                }
+            })
             .join("");
 
-        if (memberNames.length == 0) {
+        if (names.length == 0) {
             return "የተመዘገበ አባል የለም። እባክዎን አባል በመመዝገብ ይጀምሩ።";
         } else {
+            console.log(names.length);
+            if (names.length > 10) {
+                paginationContainer.style = "display: block";
+            }
             return membersTable(memberNames);
         }
     };
 
     const reloadTable = (search) => {
-        window.api.getMembers(search)
+        window.api
+            .getMembers(search)
             .then((member) => {
-            names = member;
-            membersList.innerHTML = loadedMembers(names);
-        })
-        .catch(err => {
-            console.log(err);
-        });
+                names = member;
+                membersList.innerHTML = loadedMembers(names);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     };
 
     reloadTable();
