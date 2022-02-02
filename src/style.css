@@ -150,6 +150,32 @@ header {
 }
 
 /* Members table styling */
+#paginationContainer {
+    display: none;
+    border: solid 1px red;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination li {
+    display: inline;
+}
+
+.pagination li a {
+    font-size: 12px;
+    color: black;
+    float: left;
+    padding: 4px 12px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+}
+
+.w3-border-right {
+    border-right: none;
+}
+
 .search-field {
     border-radius: 0 20px 20px 0;
     height: 2.45rem;

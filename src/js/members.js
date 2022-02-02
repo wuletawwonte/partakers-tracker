@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     let memberAddedAlert = document.getElementById("memberAddedAlert");
     let membersList = document.getElementById("membersContainer");
     let searchField = document.getElementById("searchfield");
+    let paginationContainer = document.getElementById("paginationContainer");
+
+    paginationContainer.style = "display: block";
 
     searchField.addEventListener("keyup", () => {
         reloadTable(searchField.value);
