@@ -1,9 +1,27 @@
 document.addEventListener("DOMContentLoaded", async () => {
+    const page = {
+        start: 0,
+        end: 9
+    }    
     let names = [];
     let memberAddedAlert = document.getElementById("memberAddedAlert");
     let membersList = document.getElementById("membersContainer");
     let searchField = document.getElementById("searchfield");
     let paginationContainer = document.getElementById("paginationContainer");
+    const prevBtn = document.getElementById("prev-button");
+    const nextBtn = document.getElementById("next-button");
+
+    prevBtn.addEventListener("click", () => {        
+        page.start -= 10;
+        page.end -= 10;
+        reloadTable();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        page.start += 10;
+        page.end += 10;
+        reloadTable(searchField.value);
+    });
 
     searchField.addEventListener("keyup", () => {
         reloadTable(searchField.value);
@@ -42,7 +60,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 `;
             })
             .filter((member, index) => {
-                if (index < 10) {
+                if (index >= page.start && index < page.end) {
                     return member;
                 }
             })

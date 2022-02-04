@@ -163,13 +163,14 @@ header {
     display: inline;
 }
 
-.pagination li a {
+.pagination li button {
     font-size: 12px;
     color: black;
     float: left;
     padding: 4px 12px;
     text-decoration: none;
     border: 1px solid #ccc;
+    cursor: pointer;
 }
 
 .w3-border-right {
