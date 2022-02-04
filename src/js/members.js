@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     prevBtn.addEventListener("click", () => {        
         page.start -= 10;
         page.end -= 10;
-        reloadTable();
+        reloadTable(searchField.value);
     });
 
     nextBtn.addEventListener("click", () => {
@@ -23,7 +23,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         reloadTable(searchField.value);
     });
 
+    const pageReset = () => {
+        page.start = 0;
+        page.end = 9;
+    };
+
     searchField.addEventListener("keyup", () => {
+        pageReset();
         reloadTable(searchField.value);
     });
 
@@ -60,7 +66,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 `;
             })
             .filter((member, index) => {
-                if (index >= page.start && index < page.end) {
+                if (index >= page.start && index <= page.end) {
                     return member;
                 }
             })
@@ -72,6 +78,18 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.log(names.length);
             if (names.length > 10) {
                 paginationContainer.style = "display: block";
+                if(page.start == 0) {
+                    prevBtn.style = "pointer-events: none; color: gray;";
+                } else {
+                    prevBtn.style = "display: block";
+                }
+                if(page.end > names.length) {
+                    nextBtn.style = "pointer-events: none; color: gray;";
+                } else {
+                    nextBtn.style = "display: black"
+                }
+            } else {
+                paginationContainer.style = "display: none";
             }
             return membersTable(memberNames);
         }
