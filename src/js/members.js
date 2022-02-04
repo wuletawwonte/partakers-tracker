@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const page = {
         start: 0,
-        end: 9
-    }    
+        end: 9,
+    };
     let names = [];
     let memberAddedAlert = document.getElementById("memberAddedAlert");
     let membersList = document.getElementById("membersContainer");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const prevBtn = document.getElementById("prev-button");
     const nextBtn = document.getElementById("next-button");
 
-    prevBtn.addEventListener("click", () => {        
+    prevBtn.addEventListener("click", () => {
         page.start -= 10;
         page.end -= 10;
         reloadTable(searchField.value);
@@ -73,20 +73,21 @@ document.addEventListener("DOMContentLoaded", async () => {
             .join("");
 
         if (names.length == 0) {
+            paginationContainer.style = "display: none";
             return "የተመዘገበ አባል የለም። እባክዎን አባል በመመዝገብ ይጀምሩ።";
         } else {
             console.log(names.length);
             if (names.length > 10) {
                 paginationContainer.style = "display: block";
-                if(page.start == 0) {
+                if (page.start == 0) {
                     prevBtn.style = "pointer-events: none; color: gray;";
                 } else {
                     prevBtn.style = "display: block";
                 }
-                if(page.end > names.length) {
+                if (page.end > names.length) {
                     nextBtn.style = "pointer-events: none; color: gray;";
                 } else {
-                    nextBtn.style = "display: black"
+                    nextBtn.style = "display: black";
                 }
             } else {
                 paginationContainer.style = "display: none";
