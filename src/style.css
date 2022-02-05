@@ -389,7 +389,6 @@ header {
 /* Member details page styling  */
 
 .member-details {
-    margin-top: 20px;
     background-color: white;
     padding: 20px;
     min-height: 100px;    
@@ -397,6 +396,7 @@ header {
 
 .member-details-header {
     display: flex;
+    justify-content: space-between;
     /* border: solid red 1px; */
 }
 
@@ -415,4 +415,20 @@ header {
     object-fit: cover;
     height: 180px;
     width: 180px;
+}
+
+.member-actions {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 2fr 2fr;
+}
+
+.edit-action {
+    grid-column: 1 / span2;
+}
+
+.member-actions button {
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
 }
