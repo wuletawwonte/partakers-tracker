@@ -419,6 +419,7 @@ header {
 
 .member-actions {
     width: 20%;
+    min-width: 16%;
     display: grid;
     gap: 8px;
     grid-template-columns: repeat(2, 1fr);
@@ -436,5 +437,35 @@ header {
 }
 
 .member-actions button:hover {
-    outline: solid purple 0.1px;
+    border: solid #00c5c1 1px;
+}
+
+.member-details-body {
+    margin-top: 30px;
+}
+
+.member-details-menu {
+    background-color: #ebf7ff;
+}
+
+.member-details-menu ul{
+    padding: 0;
+}
+
+.member-details-menu ul li {
+    display: inline;
+}
+
+.member-details-menu ul li button {
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;    
+    padding: 10px 10px;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.member-details-menu-active {
+    background-color: #3d8ecb;
 }
