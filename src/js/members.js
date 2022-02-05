@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             .map((member, index) => {
                 return `<tr>
                     <td>${++index}</td>
-                    <td><a class="member-link" href="#">${
+                    <td><a class="member-link" href="memberdetails.html">${
                         member.firstname
                     }</a></td>
                     <td><a class="member-link" href="#">${
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         member.lastname
                     }</a></td>
                     <td><a class="member-link" href="#">${
-                        member.created
+                        member.phone_number
                     }</a></td>
                     <td><button>Delete</button></td>
                 </tr>
@@ -74,9 +74,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (names.length == 0) {
             paginationContainer.style = "display: none";
-            return "የተመዘገበ አባል የለም። እባክዎን አባል በመመዝገብ ይጀምሩ።";
+            return `<span>የተመዘገበ አባል የለም። እባክዎን አባል በመመዝገብ ይጀምሩ።</span>`;
         } else {
-            console.log(names.length);
             if (names.length > 10) {
                 paginationContainer.style = "display: block";
                 if (page.start == 0) {
@@ -119,7 +118,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <th>ስም</th>
                             <th>የአባት ስም</th>
                             <th>የአያት ስም</th>
-                            <th>Created</th>
+                            <th>ስልክ ቁጥር</th>
                             <th>ተግባር</th>
                         </tr>
                     </thead>
