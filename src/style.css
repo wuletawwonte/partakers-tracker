@@ -397,5 +397,22 @@ header {
 
 .member-details-header {
     display: flex;
-    border: solid red 1px;
+    /* border: solid red 1px; */
+}
+
+.member-picture {
+    display: flex;
+    gap: 10px;  
+}
+
+.member-picture div h3 {
+    color: purple;
+}
+
+.avatar {
+    background-repeat: repeat-y;
+    padding: 0;
+    object-fit: cover;
+    height: 180px;
+    width: 180px;
 }
