@@ -418,17 +418,23 @@ header {
 }
 
 .member-actions {
+    width: 20%;
     display: grid;
-    gap: 5px;
-    grid-template-columns: 2fr 2fr;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .edit-action {
-    grid-column: 1 / span2;
+    grid-column: 1 / span 2;
 }
 
 .member-actions button {
     border-radius: 0;
-    border: none;
+    border: solid gray 1px;
     cursor: pointer;
+    color: #666666;
+}
+
+.member-actions button:hover {
+    outline: solid purple 0.1px;
 }
