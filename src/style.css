@@ -457,15 +457,24 @@ header {
 }
 
 .member-details-menu ul li button {
-    height: 40px;
+    height: 30px;
     border: none;
     cursor: pointer;    
-    padding: 10px 10px;
-    font-size: 17px;
+    padding: 5px 10px;
+    font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .member-details-menu-active {
     background-color: #2f99eb;
     color: white;
+}
+
+#member-details-content {
+    padding-top: 10px;
+}
+
+#member-details-content h3 {
+    color: #333;
+    font-weight: 100;
 }
