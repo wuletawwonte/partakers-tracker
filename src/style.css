@@ -413,8 +413,8 @@ header {
     background-repeat: repeat-y;
     padding: 0;
     object-fit: cover;
-    height: 180px;
-    width: 180px;
+    height: 170px;
+    width: 170px;
 }
 
 .member-actions {
@@ -459,7 +459,6 @@ header {
 .member-details-menu ul li button {
     height: 40px;
     border: none;
-    background-color: transparent;
     cursor: pointer;    
     padding: 10px 10px;
     font-size: 17px;
@@ -467,5 +466,6 @@ header {
 }
 
 .member-details-menu-active {
-    background-color: #3d8ecb;
+    background-color: #2f99eb;
+    color: white;
 }
