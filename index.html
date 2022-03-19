@@ -1,58 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            http-equiv="Content-Security-Policy"
-            content="default-src 'self'"
-        />
-        <title>በወንጌልም ማኅበረተኛ</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+    <title>በወንጌልም ማኅበረተኛ</title>
 
-        <link rel="stylesheet" href="./src/assets/fontawesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./src/style.css" />
-    </head>
-    <body>
-        <header>
-            <div class="header-content">
-                <h2 class="header-verse">
-                    &#10077;በወንጌልም ማኅበረተኛ እሆን ዘንድ <b>ስለ ወንጌል</b> ሁሉን
-                    አደርጋለሁ።&#10078;
-                </h2>
-                <p>1ኛ ቆሮ 9:23</p>
-            </div>
-        </header>
-        <div class="app-content">
-            <nav class="side-nav">
-                <ul class="side-nav-menu">
-                    <li class="activated-page-link">
-                        <a href="index.html" data-link><i class="fa fa-dashboard"></i> ዳሽቦርድ</a>
-                    </li>
-                    <li>
-                        <a href="./src/pages/members.html" data-link><i class="fa fa-users"></i> አባላት</a>
-                    </li>
-                    <li>
-                        <a href="./src/pages/addmember.html" data-link><i class="fa fa-user-plus"></i> አባል መመዝገቢያ</a>
-                    </li>
-                    <li>
-                        <a href="./src/pages/payment.html" data-link><i class="fa fa-money"></i> ክፍያ</a>
-                    </li>
-                    <li>
-                        <a href="./src/pages/settings.html" data-link
-                            ><i class="fa fa-gear"></i> መቼት</a
-                        >
-                    </li>
-                </ul>
-            </nav>
-            <div class="main-content">
-                <div class="main-content-item">
-                    <h2>Dashboard</h2>
-                    hey how u doing?
-                </div>
-                <div id="app"></div>
-            </div>
+    <link
+      rel="stylesheet"
+      href="./src/assets/fontawesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h2 class="header-verse">
+          &#10077;በወንጌልም ማኅበረተኛ እሆን ዘንድ <b>ስለ ወንጌል</b> ሁሉን አደርጋለሁ።&#10078;
+        </h2>
+        <p>1ኛ ቆሮ 9:23</p>
+      </div>
+    </header>
+    <div class="app-content">
+      <nav class="side-nav">
+        <ul class="side-nav-menu">
+          <li class="activated-page-link">
+            <a href="index.html" data-link
+              ><i class="fa fa-dashboard"></i> ዳሽቦርድ</a
+            >
+          </li>
+          <li>
+            <a href="./src/pages/members.html" data-link
+              ><i class="fa fa-users"></i> አባላት</a
+            >
+          </li>
+          <li>
+            <a href="./src/pages/addmember.html" data-link
+              ><i class="fa fa-user-plus"></i> አባል መመዝገቢያ</a
+            >
+          </li>
+          <li>
+            <a href="./src/pages/payment.html" data-link
+              ><i class="fa fa-money"></i> ክፍያ</a
+            >
+          </li>
+          <li>
+            <a href="./src/pages/settings.html" data-link
+              ><i class="fa fa-gear"></i> መቼት</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="main-content homepage">
+        <div class="main-content-item">
+          <h2>Dashboard</h2>
+          hey how u doing?
         </div>
-        <script type="module" src="./src/js/app.js"></script>
-    </body>
+        <div id="app"></div>
+      </div>
+      <div class="main-content addmember">
+        <div class="main-content-item add-member-titlebar">
+          <div class="add-member-titlebar-left">
+            <h2>አባል መመዝገቢያ</h2>
+            <p>የወንጌል ማህበርተኛ መመዝገቢያ ፎርም</p>
+          </div>
+        </div>
+        <div class="add-member-form-container">
+          <div class="add-member-form-header">
+            <h3>የአባሉን መረጃ ይመዝግቡ</h3>
+          </div>
+          <div class="add-member-form">
+            <p id="errorMessage"></p>
+            <form>
+              <div class="row">
+                <div class="add-member-input-container">
+                  <input
+                    type="text"
+                    id="firstname"
+                    placeholder="ስም"
+                    class="add-member-input"
+                    required
+                  />
+                  <div id="firstname-error" class="invalid-feedback">
+                    What the heck
+                  </div>
+                </div>
+                <div class="add-member-input-container">
+                  <input
+                    type="text"
+                    id="middlename"
+                    class="add-member-input"
+                    placeholder="የአባት ስም"
+                    required
+                  />
+                  <div id="middlename-error" class="invalid-feedback">
+                    What the heck
+                  </div>
+                </div>
+                <div class="add-member-input-container">
+                  <input
+                    type="text"
+                    id="lastname"
+                    class="add-member-input"
+                    placeholder="የአያት ስም"
+                    required
+                  />
+                  <div id="lastname-error" class="invalid-feedback">
+                    What the heck
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="add-member-input-container">
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="add-member-input"
+                    placeholder="የሞባይል ስልክ ቁጥር"
+                  />
+                  <div id="phone-error" class="invalid-feedback">
+                    What the heck
+                  </div>
+                </div>
+                <div class="add-member-input-container">
+                  <input
+                    type="number"
+                    min="0"
+                    id="amount"
+                    class="add-member-input"
+                    placeholder="ወራዊ መዋጮ"
+                    required
+                  />
+                  <div id="amount-error" class="invalid-feedback">
+                    What the heck
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" id="saveMember">
+                መዝግብ
+              </button>
+              <a href="addmember.html" class="btn btn-secondary">ዳግም አስጀምር</a>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content memberdetails">
+        <div class="member-details">
+          <div class="member-details-header">
+            <div class="member-picture">
+              <img src="../assets/avatars/default-avatar.jpg" class="avatar" />
+              <div>
+                <h3>Wuletaw Wonte</h3>
+                <span>+251926350413</span>
+              </div>
+            </div>
+            <div class="member-actions">
+              <button class="edit-action">
+                <p><i class="fa fa-edit fa-3x"></i></p>
+                አስተካክል
+              </button>
+              <button>
+                <p><i class="fa fa-money fa-2x"></i></p>
+                ክፍያ
+              </button>
+              <button>
+                <p><i class="fa fa-trash fa-2x"></i></p>
+                ይጥፋ
+              </button>
+            </div>
+          </div>
+          <div class="member-details-body">
+            <div class="member-details-menu">
+              <ul>
+                <li><button id="member-details-list">ክፍያ</button></li>
+                <li><button id="member-details-pay">About</button></li>
+              </ul>
+            </div>
+            <div id="member-details-content"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content members">
+        <div class="members-table">
+          <div class="members-table-header">
+            <div>
+              <input
+                type="search"
+                id="searchfield"
+                class="search-field"
+                placeholder="ፈልግ"
+              />
+            </div>
+
+            <div class="add-member-btn-container">
+              <a href="addmember.html" class="btn btn-default">አባል መዝግብ</a>
+            </div>
+          </div>
+          <div id="memberAddedAlert"></div>
+          <div id="membersContainer"></div>
+          <div id="paginationContainer">
+            <ul class="pagination">
+              <li>
+                <button class="w3-border-right" id="prev-button">❮</button>
+              </li>
+              <li><button id="next-button">❯</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content payment">
+        <div class="main-content-item">
+          <h2>Payment</h2>
+          hey how u doing?
+        </div>
+        <div id="app"></div>
+      </div>
+
+      <div class="main-content settings">
+        <div class="main-content-item">
+          <h2>Settings</h2>
+          hey how u doing?
+        </div>
+        <div id="app"></div>
+      </div>
+    </div>
+    <script src="./src/js/app.js"></script>
+  </body>
 </html>
