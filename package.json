@@ -8,7 +8,7 @@
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Wuletaw Wonte",
   "license": "ISC",
   "dependencies": {
     "better-sqlite3-with-prebuilds": "^7.4.3",
