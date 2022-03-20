@@ -14,7 +14,6 @@ saveMemberBtn.addEventListener("click", (e) => {
   const firstnameError = document.getElementById("firstname-error");
   const middlenameError = document.getElementById("middlename-error");
   const lastnameError = document.getElementById("lastname-error");
-  const phoneNumberError = document.getElementById("phone-error");
   const amountError = document.getElementById("amount-error");
 
   const validate = () => {
