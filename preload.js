@@ -9,7 +9,12 @@ const addMember = (member) => {
     membersModel.addMember(member);
 }
 
+const getMember = async (id) => {
+    return membersModel.getMember(id);
+}
+
 contextBridge.exposeInMainWorld("api", {
     getMembers,
-    addMember
+    addMember,
+    getMember
 });

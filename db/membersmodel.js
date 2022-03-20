@@ -13,3 +13,13 @@ exports.addMember = (member) => {
     ('${member.firstname}', '${member.middlename}', '${member.lastname}', '${member.phoneNumber}', '${member.amount}', '${member.created}')`;
     db.exec(query);
 }
+
+exports.getMember = (id) => {
+    const query = `SELECT * FROM members WHERE id == ${id}`;
+    let stmt = db.prepare(query);
+    let res = stmt.all();
+    if(res.length == 0) {
+        return null;
+    }
+    return res;
+}

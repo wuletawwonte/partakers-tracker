@@ -160,19 +160,14 @@ const loadedMembers = (names) => {
     .map((member, index) => {
       return `<tr>
                     <td>${++index}</td>
-                    <td><a class="member-link" href="#">${
-                      member.firstname
-                    }</a></td>
-                    <td><a class="member-link" href="#">${
-                      member.middlename
-                    }</a></td>
-                    <td><a class="member-link" href="#">${
-                      member.lastname
-                    }</a></td>
-                    <td><a class="member-link" href="#">${
-                      member.phone_number
-                    }</a></td>
-                    <td><button>Delete</button></td>
+                    <td>${member.firstname}</td>
+                    <td>${member.middlename}</td>
+                    <td>${member.lastname}</td>
+                    <td>${member.phone_number}</td>
+                    <td class="actions-column">
+                      <button class="row-action-btn delete-btn"><i class="fa fa-remove fa-inverse"></i></button>
+                      <button class="row-action-btn edit-btn"><i class="fa fa-edit fa-inverse"></i></button>
+                    </td>
                 </tr>
                 `;
     })
@@ -204,6 +199,10 @@ const loadedMembers = (names) => {
     }
     return membersTable(memberNames);
   }
+};
+
+const memberDetails = (id) => {
+  console.log(id);
 };
 
 const reloadTable = (search) => {
