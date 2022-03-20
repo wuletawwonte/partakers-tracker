@@ -62,7 +62,7 @@ saveMemberBtn.addEventListener("click", (e) => {
     };
     window.api.addMember(newMember);
     sessionStorage.setItem("message", "የወንጌል ማህበርተኛው በትክክል ተመዝግቧል።");
-    // window.location.href = `../pages/members.html`;
+    navigateTo(findMenu('members'));
   }
 });
 
@@ -251,15 +251,34 @@ const pages = document.querySelectorAll(".main-content");
 menuItems.forEach((item) => {
   item.addEventListener("click", (e) => {
     if (item.id === e.target.id) {
-      menuItems.forEach(mItem => mItem.classList.remove('activated-page-link'));
-      item.classList.add("activated-page-link");
-      pages.forEach((pageItem) => {
-        if (pageItem.classList.contains(e.target.id)) {
-          pageItem.classList.add("active-page");
-        } else {
-          pageItem.classList.remove("active-page");
-        }
-      });
+      navigateTo(item);
     }
   });
+});
+
+function navigateTo(menu) {
+  menuItems.forEach(mItem => mItem.classList.remove('activated-page-link'));
+  menu.classList.add("activated-page-link");
+  pages.forEach((pageItem) => {
+    if (pageItem.classList.contains(menu.id)) {
+      pageItem.classList.add("active-page");
+    } else {
+      pageItem.classList.remove("active-page");
+    }
+  });
+}
+
+function findMenu(id) {
+  for(let i=0; i<menuItems.length; i++) {
+    if(menuItems[i].id === id) {
+      return menuItems[i];
+    }
+  }
+  return menuItems[0];
+}
+
+const addMemberBtn = document.querySelector('.add-member-btn-container > button');
+
+addMemberBtn.addEventListener('click', () => {
+  navigateTo(findMenu('addmember'));
 });
