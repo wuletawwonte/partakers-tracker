@@ -62,7 +62,7 @@ saveMemberBtn.addEventListener("click", (e) => {
     };
     window.api.addMember(newMember);
     sessionStorage.setItem("message", "የወንጌል ማህበርተኛው በትክክል ተመዝግቧል።");
-    window.location.href = `../pages/members.html`;
+    // window.location.href = `../pages/members.html`;
   }
 });
 
@@ -161,7 +161,7 @@ const loadedMembers = (names) => {
     .map((member, index) => {
       return `<tr>
                     <td>${++index}</td>
-                    <td><a class="member-link" href="memberdetails.html">${
+                    <td><a class="member-link" href="#">${
                       member.firstname
                     }</a></td>
                     <td><a class="member-link" href="#">${
@@ -241,3 +241,25 @@ const membersTable = (names) => {
             `;
   return tableContent;
 };
+
+// Navigation starts here
+
+const menuItems = document.querySelectorAll(".main-menu-item");
+
+const pages = document.querySelectorAll(".main-content");
+
+menuItems.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    if (item.id === e.target.id) {
+      menuItems.forEach(mItem => mItem.classList.remove('activated-page-link'));
+      item.classList.add("activated-page-link");
+      pages.forEach((pageItem) => {
+        if (pageItem.classList.contains(e.target.id)) {
+          pageItem.classList.add("active-page");
+        } else {
+          pageItem.classList.remove("active-page");
+        }
+      });
+    }
+  });
+});

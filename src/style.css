@@ -143,6 +143,7 @@ header {
 }
 
 .main-content.active-page {
+  display: block;
   flex-basis: 2;
   flex-grow: 1;
   padding: 15px;

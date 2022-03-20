@@ -25,34 +25,24 @@
     <div class="app-content">
       <nav class="side-nav">
         <ul class="side-nav-menu">
-          <li class="activated-page-link">
-            <a href="index.html" data-link
-              ><i class="fa fa-dashboard"></i> ዳሽቦርድ</a
-            >
+          <li class="main-menu-item activated-page-link" id="homepage">
+            <i class="fa fa-dashboard"></i> ዳሽቦርድ
           </li>
-          <li>
-            <a href="./src/pages/members.html" data-link
-              ><i class="fa fa-users"></i> አባላት</a
-            >
+          <li class="main-menu-item" id="members">
+            <i class="fa fa-users"></i> አባላት
           </li>
-          <li>
-            <a href="./src/pages/addmember.html" data-link
-              ><i class="fa fa-user-plus"></i> አባል መመዝገቢያ</a
-            >
+          <li class="main-menu-item" id="addmember">
+            <i class="fa fa-user-plus"></i> አባል መመዝገቢያ
           </li>
-          <li>
-            <a href="./src/pages/payment.html" data-link
-              ><i class="fa fa-money"></i> ክፍያ</a
-            >
+          <li class="main-menu-item" id="payment">
+            <i class="fa fa-money"></i> ክፍያ
           </li>
-          <li>
-            <a href="./src/pages/settings.html" data-link
-              ><i class="fa fa-gear"></i> መቼት</a
-            >
+          <li class="main-menu-item" id="settings">
+            <i class="fa fa-gear"></i> መቼት
           </li>
         </ul>
       </nav>
-      <div class="main-content homepage">
+      <div class="main-content active-page homepage">
         <div class="main-content-item">
           <h2>Dashboard</h2>
           hey how u doing?
@@ -150,7 +140,7 @@
         <div class="member-details">
           <div class="member-details-header">
             <div class="member-picture">
-              <img src="../assets/avatars/default-avatar.jpg" class="avatar" />
+              <img src="./src/assets/avatars/default-avatar.jpg" class="avatar" />
               <div>
                 <h3>Wuletaw Wonte</h3>
                 <span>+251926350413</span>
